@@ -1,0 +1,3 @@
+[zenoss.zenpacks]
+ZenPacks.zenoss.FalconMonitor = ZenPacks.zenoss.FalconMonitor
+
