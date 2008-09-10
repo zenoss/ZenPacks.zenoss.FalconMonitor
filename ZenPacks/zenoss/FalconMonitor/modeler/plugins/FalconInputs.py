@@ -70,14 +70,23 @@ class FalconInputs(SnmpPlugin):
             om              = self.objectMap()
             om.id           = self.prepId("%d" % counter.next())
 
-            if   len(data[i]) == 13:
+            # Keys 1 and 5 are required in every case
+            if not data[i].has_key(1) or not data[i].has_key(5):
+                continue
+
+            # If we have a valid 13 column input
+            elif data[i].has_key(13):
                 om.type        = data[i][1]
                 om.snmpindex   = "%d.2.0" % i
                 om.description = data[i][5]
-            elif len(data[i]) == 5:
+
+            # If we have a valid 5 column input
+            elif data[i].has_key(3):
                 om.type        = data[i][1]
                 om.snmpindex   = "%d.2.0" % i
                 om.description = data[i][3]
+
+            # We don't appear to have a valid input
             else:
                 continue
 
