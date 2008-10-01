@@ -11,6 +11,9 @@ ZenPacks.zenoss.FalconMonitor.FalconDevice
 </property>
 <tomanycont id='rrdTemplates'>
 <object id='Input' module='Products.ZenModel.RRDTemplate' class='RRDTemplate'>
+<property type="string" id="targetPythonClass" mode="w" >
+ZenPacks.zenoss.FalconMonitor.Input
+</property>
 <tomanycont id='datasources'>
 <object id='Reading' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
 <property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
