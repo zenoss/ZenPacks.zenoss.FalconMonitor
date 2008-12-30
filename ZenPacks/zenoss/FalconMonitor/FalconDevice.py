@@ -25,7 +25,7 @@ class FalconDevice(Device):
     custom_actions.extend(factory_type_information[0]['actions'])
     custom_actions.insert(2,
            { 'id'              : 'falconDeviceDetails'
-           , 'name'            : 'Sensors'
+           , 'name'            : 'Inputs'
            , 'action'          : 'falconDeviceDetails'
            , 'permissions'     : (ZEN_VIEW, ) },
            )
