@@ -3,6 +3,9 @@
 <!-- ('', 'zport', 'dmd', 'Devices', 'Environment', 'Falcon') -->
 <object id='/zport/dmd/Devices/Environment' module='Products.ZenModel.DeviceClass' class='DeviceClass'>
 <object id='/zport/dmd/Devices/Environment/Falcon' module='Products.ZenModel.DeviceClass' class='DeviceClass'>
+<property type="lines" id="devtypes" mode="w" >
+[('RLE Falcon', 'SNMP')]
+</property>
 <property visible="True" type="lines" id="zCollectorPlugins" >
 ['zenoss.snmp.NewDeviceMap', 'zenoss.snmp.DeviceMap', 'zenoss.snmp.InterfaceMap', 'zenoss.snmp.RouteMap', 'FalconDeviceMap', 'FalconInputs']
 </property>
