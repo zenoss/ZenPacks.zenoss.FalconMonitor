@@ -13,6 +13,7 @@ $ID: $"""
 __version__ = '$Revision: $'[11:-2]
 
 from Products.DataCollector.plugins.CollectorPlugin import SnmpPlugin, GetMap
+from Products.DataCollector.plugins.DataMaps import MultiArgs
 
 class FalconDeviceMap(SnmpPlugin):
 
@@ -32,6 +33,7 @@ class FalconDeviceMap(SnmpPlugin):
             return None
             
         om = self.objectMap()
-        om.setHWProductKey = getdata['manufacturer'] + " " + getdata['model']
-        om.setOSProductKey = 'Falcon OS ' + getdata['firmwareVersion']
+        om.setHWProductKey = MultiArgs(getdata['model'], "RLE Technologies")
+        om.setOSProductKey = MultiArgs(
+            'Falcon OS ' + getdata['firmwareVersion'], "RLE Technologies")
         return om
