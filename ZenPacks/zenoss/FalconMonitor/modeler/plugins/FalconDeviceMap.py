@@ -8,9 +8,7 @@ __doc__="""FalconDeviceMap
 
 FalconDeviceMap maps the device level information for Falcon Environmental monitors.
 
-$ID: $"""
-
-__version__ = '$Revision: $'[11:-2]
+"""
 
 from Products.DataCollector.plugins.CollectorPlugin import SnmpPlugin, GetMap
 from Products.DataCollector.plugins.DataMaps import MultiArgs

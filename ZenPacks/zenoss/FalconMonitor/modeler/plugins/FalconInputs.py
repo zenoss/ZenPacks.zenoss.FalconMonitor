@@ -8,9 +8,7 @@ __doc__="""FalconInputs
 
 FalconInputs map Falcon devices to their installed sensors
 
-$Id: $"""
-
-__version__ = '$Revision: $'[11:-2]
+"""
 
 from Products.DataCollector.plugins.CollectorPlugin import SnmpPlugin, \
         GetMap
