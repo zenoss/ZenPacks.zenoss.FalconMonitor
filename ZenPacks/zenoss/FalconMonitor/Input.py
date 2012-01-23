@@ -35,7 +35,7 @@ class Input(DeviceComponent, ManagedEntity):
 
     _properties = (
         {'id':'description',  'type':'string',  'mode':''},
-        {'id':'type',  'type':'integer', 'mode':''},
+        {'id':'type',  'type':'int', 'mode':''},
         )
 
     _relations = (
